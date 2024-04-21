@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> header }}
+<form action="/addproduct" method="POST" encType="multipart/form-data">
+<div class="form">
+ 
+  <h3>Upload product</h3>
+  {{#if msg}} 
+    <div class="alert">
+      {{msg}}
+    </div>
+ {{/if}}
+  <input type="text" name="name" placeholder="Product">
+  <input type="text" name="about" placeholder="About">
+  <input type="text" name="des" placeholder="Description">
+  <input type="file" class="file" name="sampleFile" accept="image/*" />
+  <input type="submit" class="btn btn-primary">
+  <p>Back to Products<a href="/adview">↣</a></p>
+</div>
+</form>
+
+
+</body>
+</html>

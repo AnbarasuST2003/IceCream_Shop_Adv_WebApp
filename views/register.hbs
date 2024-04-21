@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My awesome icecream store</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="nav-background">
+            <div class="mobile-logo">
+                <img src="/images/preview1.png" alt="">
+            </div>
+            
+        </div>
+        <div class="site-content-wrapper">
+            <div class="nav-trigger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-bar-chart">
+                    <line x1="12" y1="20" x2="12" y2="10" />
+                    <line x1="18" y1="20" x2="18" y2="4" />
+                    <line x1="6" y1="20" x2="6" y2="16" /></svg>
+            </div>
+            <div class="site-content">
+                <header class="topbar">
+                    <div class="container flex justify-between items-center">
+                        
+                        <div class="icons">
+                            <span class="divider">|</span>
+                            <a href="/home"><img src="/icons/facebook.svg" alt=""></a>
+                            <a href="/home"><img src="/icons/twitter.svg" alt=""></a>
+                            <a href="/home"><img src="/icons/google.svg" alt=""></a>
+                            <a href="/home"><img src="/icons/instagram.svg" alt=""></a>
+                            
+                            <span class="divider">|</span>
+                        </div>
+                        <div class="auth flex items-center">
+                            <span class="divider">|</span>
+                            <div>
+                                <img src="/icons/user-icon.svg" alt="">
+                                <a href="/">Log in</a>
+                            </div>
+                            <span class="divider">|</span>
+                            <div>
+                                <img src="/icons/edit.svg" alt="">
+                                <a href="/register">Register Now</a>
+                            </div>
+                            <span class="divider">|</span>
+                           
+                        </div>
+                    </div>
+                </header>
+
+                <nav>
+                    <div class="top">
+                        <div class="container flex justify-between">
+                            <div class="contact flex items-center">
+                                <img src="/icons/phone.svg" alt="">
+                                <div>
+                                    <h5>Call US: (+91) 8754604230</h5>
+                                    <h6>E-mail : josephanbu46@gmail.com</h6>
+                                </div>
+                            </div>
+                            <div class="branding">
+                                <img src="/images/preview1.png" alt="">
+                            </div>
+                            <div class="time flex items-center">
+                                <img src="/icons/clock.svg" alt="">
+                                <div>
+                                    <h5>Working Hours:</h5>
+                                    <h6>Mon - Sat (8.00am - 12.00am)</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </nav>
+
+                
+                <section class="big-deal">
+                    <div class="container">
+                        <h1 class="section-heading text-pure">New Regiter</h1>
+                        
+                          
+                      <div class="sign">
+                        <img class="uplogo" src="/images/man.png">
+                        <h1>REGISTER</h1>
+                       
+                                  
+                        <form action="/authen/register" name="myform" method="post"  onsubmit="return validateform()">  
+                            <div class="whole_input">             
+                                {{#if msg}}
+                                    <p class="{{msg_type}}">{{msg}}</p>
+                                {{/if}}   
+                                    
+
+                                <input type="text" name="name" class="input-box" placeholder="Enter UserName" title="Your Name">
+                           
+                                <input type="email" name="email" class="input-box" placeholder="Enter Email" title="Your Email">
+                          
+                                <input type="password" name="password" class="input-box" placeholder="Enter Password" title="Your Password">
+                                                      
+                                <input type="password" name="repassword" class="input-box" placeholder="Repeat-Password" title="Confirm-Password">
+
+                            </div> 
+                   
+                           <button type="submit" value="SignUp" class="signbtn">Register</button>
+                        </form>  
+                      </div> 
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    {{> footer  }}
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/js/app.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{> header }}
+<body>
+    {{#if msg}} 
+    <div class="alert">
+      {{msg}}
+    </div>
+ {{/if}}
+{{#each rows}}
+<form action="/editproduct/{{this.ID}}" method="POST" encType="multipart/form-data">
+<div class="form">
+ 
+  <h3>Edit product</h3>
+  
+  <input type="text" name="name" placeholder="Product" value="{{this.NAME}}">
+  <input type="text" name="about" placeholder="About" value="{{this.About}}">
+  <input type="text" name="des" placeholder="Description" value="{{this.DES}}">
+  <input type="file" class="file" name="sampleFile" accept="image/*" / value="{{this.IMAGE}}">
+  <button type="submit" class="btn btn-primary">Save Changes</button>
+  <p>Back to Products<a href="/adview">↣</a></p>
+</div>
+</form>
+{{/each}}
+
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My awesome food store</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./css/blog.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+       {{> slide  }}
+        <div class="site-content-wrapper">
+            <div class="nav-trigger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-bar-chart">
+                    <line x1="12" y1="20" x2="12" y2="10" />
+                    <line x1="18" y1="20" x2="18" y2="4" />
+                    <line x1="6" y1="20" x2="6" y2="16" /></svg>
+            </div>
+            <div class="site-content">
+                {{> navbar }}
+
+                <nav>
+                    <div class="top">
+                        <div class="container flex justify-between">
+                            
+                            <div class="branding">
+                                <img src="./images/preview1.png" alt="">
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="navbar magic-shadow">
+                        <div class="container flex justify-center">
+                            <a href="/home" >Home</a>
+                            <a href="/aboutus">About us</a>
+                            <a href="/product">Products</a>
+                            <a href="/blog" class="active">Blog</a>
+                            
+                            <a href="/service">Services</a>
+
+                        </div>
+                    </div>
+                </nav>
+                {{#each rows}}
+                 <section class="about-meal">
+                    <div class="container">
+                        <h1 class="section-heading">{{this.NAME}}</h1>
+                        <div class="about-meal-wrap flex">
+                            <div class="flex-1">
+                                {{#if this.IMAGE}}
+                                        <img class="card__image" src="{{this.IMAGE}}" loading="lazy" alt="User Profile">
+                                {{else}}
+                                       <img class="card__image" src="/img/default.jpg" loading="lazy" alt="User Profile">
+                                {{/if}}
+                            </div>
+                            <div class="flex-1">
+                                <h2>FeedBack : </h2><h5>{{this.DES}}</h5>
+                                <h2>About : </h2><p>{{this.About}}</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                 </section> 
+                {{/each}}
+              
+                
+                {{> footer}}        
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
